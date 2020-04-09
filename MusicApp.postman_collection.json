@@ -1,0 +1,366 @@
+{
+	"info": {
+		"_postman_id": "3a333477-83b8-40cd-b5e5-dc9da565e010",
+		"name": "MusicApp",
+		"description": "Collection for music App",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "album",
+			"item": [
+				{
+					"name": "albums",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{HOST}}/api/v1/albums",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"albums"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "album",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "task",
+									"value": "something new update",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{HOST}}/api/v1/albums/5e8e3be6b55a13023ba84cd7",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"albums",
+								"5e8e3be6b55a13023ba84cd7"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"releaseDate\": \"12/12/2018\",\n  \"rating\": 5,\n  \"title\": \"album 007\",\n  \"year\": 2020\n}"
+						},
+						"url": {
+							"raw": "{{HOST}}/api/v1/albums",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"albums"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"releaseDate\": \"2018-12-12T04:00:00.000Z\",\n        \"rating\": 5,\n        \"title\": \"Megadeth\",\n        \"year\": 2050\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{HOST}}/api/v1/albums/5e8e3be6b55a13023ba84cd7",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"albums",
+								"5e8e3be6b55a13023ba84cd7"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{HOST}}/api/v1/albums/5e8e49aa2ff35b1616acf601",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"albums",
+								"5e8e49aa2ff35b1616acf601"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "artist",
+			"item": [
+				{
+					"name": "artists",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "task",
+									"value": "something new update",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{HOST}}/api/v1/artists",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"artists"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"firstName\":\"Walter\",\n\t\"lastName\":\"Mendez\",\n\t\"birthDate\":\"12/12/1985\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{HOST}}/api/v1/artists",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"artists"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "addAlbum",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"releaseDate\": \"12/12/2018\",\n  \"rating\": 8,\n  \"title\": \"developer\",\n  \"year\": 1985\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{HOST}}/api/v1/artists/5e8e6b629666a13841e39f38/albums",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"artists",
+								"5e8e6b629666a13841e39f38",
+								"albums"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"firstName\":\"Joe\",\n\t\"lastName\":\"Jimenez\",\n\t\"birthDate\":\"12/12/1985\"\n}"
+						},
+						"url": {
+							"raw": "{{HOST}}/api/v1/artists/5e8e6b629666a13841e39f38",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"artists",
+								"5e8e6b629666a13841e39f38"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{HOST}}/api/v1/artists/5e8e6b629666a13841e39f38",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"artists",
+								"5e8e6b629666a13841e39f38"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteAlbum",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{HOST}}/api/v1/artists/5e8e6b629666a13841e39f38/albums/5e8e6eb163f2ac3b7d46fab6",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"artists",
+								"5e8e6b629666a13841e39f38",
+								"albums",
+								"5e8e6eb163f2ac3b7d46fab6"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"protocolProfileBehavior": {}
+}
