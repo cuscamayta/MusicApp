@@ -24,7 +24,7 @@ export const AlbumSchema = new Schema({
   }
 });
 
-AlbumSchema.methods.toAlbum = function toUser(): Album {
+AlbumSchema.methods.toAlbum = function toAlbum(): Album {
   return {
     id: this.id,
     releaseDate: this.releaseDate,

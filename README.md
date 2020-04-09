@@ -40,7 +40,9 @@ after the installation finish execute **npm start**
 | Update artist | [http://localhost:2500/api/v1/artists/{id}](http://localhost:2500/api/v1/artists/{id} "site") | UPDATE |
 | Delete artist | [http://localhost:2500/api/v1/artists/{id}](http://localhost:2500/api/v1/artists/{id} "site") | DELETE|
 | Delete Album from Artist  | [http://localhost:2500/api/v1/artists/{id}/albums/{id}](http://localhost:2500/api/v1/artists/{id}/albums/{id} "site") | DELETE|
-
+# Documentation
+You can find the RestAPI documentation on the follow link:
+**[https://documenter.getpostman.com/view/2424147/SzYexGY8](https://documenter.getpostman.com/view/2424147/SzYexGY8 "site")**
 
 # About the architecture
 **MusicApp** was developed using the N layer oriented architecture, providing the follow benefits:
@@ -60,6 +62,3 @@ after the installation finish execute **npm start**
 # Notes
 
 
-## License
-
-MIT
